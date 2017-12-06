@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>webcam</title>
+
+  <script src="js/tracking-min.js"></script>
+  <script src="js/face-min.js"></script>
+
+  <style>
+  video, canvas {
+    margin-left: 230px;
+    margin-top: 120px;
+    position: absolute;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- the actual video from the webcam -->
+  <video id="video" width="320" height="240" preload autoplay loop muted></video>
+
+  <!-- the video with the overlaid graphics -->
+  <canvas id="canvas" width="320" height="240"></canvas>
+
+  <img src="mask.png" id="mask">
+
+  <script>
+    window.onload = function() {
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      
+      var tracker = new tracking.ObjectTracker('face');
+      tracker.setInitialScale(4);
+      tracker.setStepSize(2);
+      tracker.setEdgesDensity(0.1);
+      tracking.track('#video', tracker, { camera: true });
+
+      var image = document.getElementById("mask");
+      
+      tracker.on('track', function(event) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        // draw a block over the face
+        event.data.forEach(function(rect) {
+          context.fillStyle = 'black';
+          // context.fillRect(rect.x, rect.y, rect.width, rect.height);
+
+          context.drawImage(image, rect.x, rect.y, rect.width, rect.height)
+
+
+
+        })
+      });
+    };
+  </script>
+
+</body>
+</html>

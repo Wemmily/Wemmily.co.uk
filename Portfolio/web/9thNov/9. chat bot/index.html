@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<title>
+			Chat Bot
+		</title>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rivescript/1.17.2/rivescript.min.js"></script>
+
+
+		<script>
+
+			$(document).ready(function() {
+
+				var bot = new RiveScript();
+
+				bot.loadFile("bot.rive", loading_done, loading_error);
+
+				function loading_done() {
+					console.log('loaded');
+					bot.sortReplies();
+				}
+
+				function loading_error() {
+					console.log('not loaded');
+				}
+
+				$('.ask').click(function(e) {
+					e.preventDefault();
+					var input = $('.user-input').val();
+					var reply = bot.reply("local-user", input);
+					console.log(reply);
+					$('.output p').html(reply);
+				});
+
+
+			});
+
+		</script>
+		
+	</head>
+
+	<body>
+
+		<h1>Chat with me<h1>
+
+		<div class="input">
+			<input type="text" placeholder="Ask me something" class="user-input"></input>
+			<input type="submit" value="Ask" class="ask"></input>
+		</div>
+
+		<div class="output">
+			<p></p>
+		</div>
+
+	</body>
+
+</html>

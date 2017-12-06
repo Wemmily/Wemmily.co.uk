@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title> Moving Image </title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+				$("body").mousemove(function(e){
+					console.log(e.pageX)
+
+					
+
+					$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)")
+
+				});
+
+
+			});
+
+		</script>
+
+</head>
+<style>
+		.headings {
+			font-size: 125px;
+			color: white;
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+			
+		
+		}
+		.subheadings1 {
+			font-size: 30px;
+			color: white;
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+			text-decoration: underline;
+			}
+
+			.subheadings {
+			font-size: 20px;
+			color: white;
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+			text-decoration: underline;
+			}
+			.paragraphs{
+			font-size: 25px;
+			color: white;
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+
+			}
+
+		</style>
+	</head>
+	<body> 
+
+		<style> .body { background-color: white ;} </style>
+
+		<h1 class="headings"> Moving Image </h1>
+
+<table style ="	width:100%; 
+				font-family: 'Pacifico', cursive;  
+				
+				border-radius: 20px;
+				color:white"
+
+<tr>
+	<th class = "subheadings1"> <a href = "../Homepage/index.html"> Home</a></th>
+	<th class = "subheadings1"> <a href = "../Blog/index.html"> Blog </a> </th>
+	<th class = "subheadings1"> <a href = "../Portfolio/index.html"> Portfolio </a> </th>
+	<th class = "subheadings1"> <a href = "../Studio/index.html"> Studio </a> </th>
+	<th class = "subheadings1"> <a href = "../About/index.html"> About </a></th>
+	<th class = "subheadings1"> <a href = "../Contact/index.html"> Contact </a> </th>
+	<th class = "subheadings1"> <a href = "../Shop/index.html"> Shop </a> </th>
+</table>
+
+
+	<div>
+		<style> {
+			.pics: width: 400px;
+					height:auto;
+		}
+	</style>
+
+	
+		<table style ="width:100%; text-align:center;">
+<tr>
+	
+	
+	<th class = "subheadings"> <a href = "../Portfolio/">Stills</a> </th>
+	<th class = "subheadings"> <a href = "../Portfolio/movingimage.html">Moving Image</a> </th>
+	<th class = "subheadings"> <a href = "../Portfolio/web.html">Web</a> </th>
+</table>
+<picture>
+<video src= "soundgifs.mov" style = width: 300px type="video/mp4"></video>
+
+<video src= "utopiagifs.mov" style = width: 300px type="video/mp4"></video>
+</picture>
+
+
+	</div>
+
+
+	</body>
+</body>
+</html>
