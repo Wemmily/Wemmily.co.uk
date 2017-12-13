@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<style>
+
+			body, html {
+				margin:0px;
+				transition:0.2s;
+				font-family: 'Helvetica', arial, sans-serif;
+			}
+
+			.playpause {
+				width:150px;
+				height:50px;
+				padding:16px;
+				color:#fff;
+				background:#000;
+				border-radius: 4px;
+				position:absolute;
+				bottom:20px;
+				left:20px;
+				cursor: pointer;
+				box-sizing:border-box;
+				text-align: center;
+				letter-spacing: 2px;
+			}
+
+
+		</style>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/dancer.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+
+				var dancer = new Dancer();
+
+				dancer.load({ src: 'music/bluemonday.mp3' });
+
+			
+
+				$('.playpause').click(function(){
+					if(dancer.isPlaying()){
+						dancer.pause();
+						$(this).html("PLAY")
+					} else {
+						dancer.play();
+						$(this).html("PAUSE")
+					}
+				});
+
+				var Kick = dancer.createKick({
+					threshold : 0.2,
+					onKick : function (){
+						var number = Math.random() * 360;
+						$('body').css ('background', 'hsla('+number+', 50%, 50%, 1)')
+					}
+
+				});
+
+			Kick.on();
+				
+			});
+
+
+		
+
+			
+
+
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="playpause">PLAY</div>
+
+	</body>
+
+</html>

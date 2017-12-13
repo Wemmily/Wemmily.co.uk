@@ -1,0 +1,36 @@
+! version = 2.0
+
+!sub i'm = i am
+!sub hi = hello
+!sub what's= what is
+
++ hello [bot] 
+- Hello human.
+
++ my name is *
+
+- <set name=<formal>>Nice to meet you, <get name>.
+
++ (what is my name|who am i)
+* <get name> == undefined => I don't know, what IS your name?
+- You're <get name>, right?
+
++ (how are you)
+- I'm fine thank-you, how are you? 
+- Not fabulous. 
+-I'm a Bot... Bot's don't have feelings. 
+
++*told**
+- Really? I thought <star1> said <star3> too!
+
+!array colors= red green blue yellow
++ my favourite colour is (@colors)
+-I'm wearing <star1> shirt
+
++ (good | good thanks)
+-that's nice dear.
+
++ *
+- I don't have a reply for that.
+- Try asking that a different way.
+

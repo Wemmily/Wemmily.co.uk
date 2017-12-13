@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+<head>
+
+<title>
+			Interaction
+</title>
+		<h1 class="headings"> 
+			 Wemmily </h1>
+<style> .headings { 
+			color: #2d2d2d; 
+			text-align: center;
+			font-size: 100px;
+			font-family: courier;
+			text-transform: uppercase;}
+
+<style>
+
+			html, body {
+				margin:0px;
+				height:100vh;
+				width:100vw;
+			}
+
+
+			div {
+				/*//text*/
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%, -50%) rotate(0deg);
+				pointer-events: none;
+				text-align: center;
+			
+		
+			}
+
+			.spinner {
+				/*//spinner*/
+				width:300px;
+				height:300px;
+				background:#2d2d2d;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%, -50%) rotate(0deg);
+				transition: 0.5s;
+				border: solid 5px #2d2d2d;
+				pointer-events: all;
+			}
+			.spinner:hover {
+				width:300px;
+				transform: translate(-50%, -50%) rotate(180deg);
+				border-radius:50%;
+				background: #fff;
+			}
+
+
+		</style>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+				$("body").mousemove(function(e){
+					console.log(e.pageX)
+
+					
+
+					$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)")
+
+				});
+
+
+			});
+
+		</script>
+</head>
+
+	<body>
+	<div class = "spinner"> </div>
+		<div class = "centretext">  </div>
+			<style> .centretext{
+				font-family: courier;
+				font-size:20px;
+				font-color: #2d2d2d; 
+				text-align: center;}
+			</style>
+	</body>
+	<body>
+
+		<div class = "paragraphs">  
+		<p>Hello and welcome to this interactive webpage.</p>
+
+		</div>
+
+		<style>
+		.paragraphs {
+			font-family: courier;
+			font-size:20px;
+			color: #2d2d2d; 
+			text-align: center;
+			padding: 150px;
+			margin: 0px;
+		}</style> 
+	</body>
+
+</html>

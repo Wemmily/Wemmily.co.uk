@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<title>
+			For loops
+		</title>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+
+				var list = [
+								{name:"Emma, ", age:20},
+								{name:"Fred, ", age:20},
+								{name:"Amber, ", age:18},
+								{name:"Reuben, ", age:19},
+								{name:"Sabrina, ", age:19},
+							];
+
+				for(var i = 0; i<list.length; i++){
+					var person = list [i]; //list [0], list [1]
+					var name = person.name;
+					var age = person.age;
+
+					console.log (i, person)
+
+
+					if(age > 18) {
+						$("body").append(name);
+					}
+				}
+			});
+
+		</script>
+		
+	</head>
+
+	<body>
+
+		
+
+	</body>
+
+</html>
