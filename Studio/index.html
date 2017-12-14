@@ -11,14 +11,26 @@
 		<script>
 
 			$(document).ready(function() {
+
+				var backgroundfancy= true;
+
 				$("body").mousemove(function(e){
-					console.log(e.pageX)
+					console.log(e.pageX);
 
 					
+					if(backgroundfancy==true) {
+						$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)");
 
-					$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)")
+					} else {
+						$("body").css("background", "black");
 
+					}
+					
 				});
+
+				$("button").click(function(e){
+					backgroundfancy=!backgroundfancy;
+				})
 
 
 			});
@@ -72,7 +84,7 @@
 				color:white"
 
 <tr>
-	<th class = "subheadings"> <a href = "../Homepage/"> Home</a></th>
+	<th class = "subheadings"> <a href = "../"> Home</a></th>
 	<th class = "subheadings"> <a href = "../Blog/"> Blog </a> </th>
 	<th class = "subheadings"> <a href = "../Portfolio/"> Portfolio </a> </th>
 	<th class = "subheadings"> <a href = "../Studio/"> Studio </a> </th>
@@ -93,7 +105,14 @@
     border: 10px solid white;
     border-radius: 20px;
    " >
-   
+   <h2 class="subheadings"> Starting Points 14/12/17 </h1>
+   	<p class ="paragraphs1"> I suppose the biggest problem is where to start with this. Many suggestions have been made for going on walks, and I agree, a great deal can be observed, collected and thought about on walks. Going to places that one has not been before often sheds light on things in the back of one's mind, or forces a different angle of thinking. Going on an 'aimless' walk, where direction, distance and end goal are not the primary concern allows decision making to be in-the-moment. An immediate engagement and response to and with one's surroundings. </p>
+
+   	<p class="paragraphs1"> Personally, I often prefer ambling in a round-about direction of where I need to go. I once walked from King's Cross Station to the Victoria Miro Gallery (For Yayoi Kusama's Infinity Mirrors). I decided for whatever reason not to use Public Transport, and simply knew that I was on the correct road and kept walking. I found a number of treasures that I would not have had access to on other occasions, and on the whole was very grateful for the exposure. Not to mention the sense of clarity I experienced when arriving at the gallery, and having my eyes attuned for observation by this point.</p>
+
+   	<p class="paragraphs1"> I would like to embark on a new project, that involves tracing my Family History. I've been exceedingly lucky in having inherited the Family Bible that dates back to 1868. This will be a fabulous research project, and I'm thinking that as a sideline I could potentially look for something to collect. It's just about keeping the thought in the back of my mind. </p>
+
+
    <h2 class="subheadings"> Rarity and Value 13/12/17 </h1>
    	<p class = paragraphs1>  I've been thinking about chance, rarity, value and how these things interplay and play a vital role in creating novelty. There are games that place particular emphasis on certain things in order to make them valuable, perhaps what is most fascinating is the fact that these entities are only valued in these artificial environments. Like the Yellow Car Game for example, in which yellow cars are valuable as spotting one allows you to punch the other players. In tutorial we talked about collections of these by-chance things; for example a collection of books that were released and then recalled due to errors, coins collected purely for their sounds, or abandoned items of clothing in parks<a href="https://www.flickr.com/photos/mattward/albums/1428963"> (Lost Winter Garments).</a>  </p>
    	<p class = "paragraphs1"> The challenge has been set for me to create my own collection of rarities, the only problem is I do not know what this is or how to set about finding it. I suppose the only way to discover this is to go out and start taking photos...</p>
@@ -104,6 +123,8 @@
    													transform: rotate(90deg); 
    													padding-right: 30px;"> 
    	<p class = "paragraphs1"> For example this miscellaneous shopping trolley left on the pavement. I wonder how many other shopping trolleys have strayed far from their original homes. I suppose that by collecting enough images and making an archive, eventually this topic could become interesting.</p>
+
+
 
    	<h2 class="subheadings"> Reflection w/b 27/11/17 </h1>
 	<p class = "paragraphs1"> This week we've been looking at the Matsutake Mushroom. At the beginning of the week I didn't feel like I knew anything about the Mushroom; I thought it was some kind of Magic Mushroom or Hallucinogen, which I have since learned is not true. The most interesting of the Mushroom's qualities for me was its rarity, and that is what the 'making' part of the project will be built upon. The struggle is finding something rare to document or treasure in such a way that it becomes valuable.   </p>
