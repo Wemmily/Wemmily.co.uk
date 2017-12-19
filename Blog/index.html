@@ -10,14 +10,26 @@
 		<script>
 
 			$(document).ready(function() {
+
+				var backgroundfancy= true;
+
 				$("body").mousemove(function(e){
-					console.log(e.pageX)
+					console.log(e.pageX);
 
 					
+					if(backgroundfancy==true) {
+						$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)");
 
-					$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)")
+					} else {
+						$("body").css("background", "black");
 
+					}
+					
 				});
+
+				$("button").click(function(e){
+					backgroundfancy=!backgroundfancy;
+				})
 
 
 			});
@@ -29,6 +41,7 @@
 
     </head>
     <body>
+    	<button> Background: On/Off </button>
 
 <style>
 		.headings {
@@ -49,6 +62,14 @@
 			color: white;
 			text-align: center;
 			font-family: 'Pacifico', cursive;
+
+			}
+			.paragraphs1{
+			font-size: 30px;
+			color: white;
+			text-align: left;
+			font-family: 'Timmana', cursive;
+			font-size: 15px;
 
 			}
 
@@ -75,9 +96,22 @@
 	<th class = "subheadings"> <a href = "../Contact/"> Contact </a> </th>
 	<th class = "subheadings"> <a href = "../Shop/"> Shop </a> </th>
 </table>
-		
+<br>
 
 		<p class= "paragraphs"> Welcome to the blog. Here you will find text updates from design-related topics. Please go to 'studio' to see work-based posts. </p>
+
+		<p class= "paragraphs">  </p>
+
+		<h2 class="subheadings"> Thoughts/Reflections 19/12/17 </h1>
+   	<p class ="paragraphs1"> Having the website is such a challenge because I don't know anything about coding... Well, I say I don't know anything, I know a lot more than I did when I began learning about Web as a medium. I understand that there's more layers than just what you see in the web browser. </p>
+
+   	<p class = "paragraphs1"> I never knew that there were three separate languages you can write code in: HTML provides the bones and structure of the webpage, CSS provides the Style, and JAVASCRIPT provides the action. The three can be used together to create lovely looking webpages, but HTML will work by itself- it'll just be plain and simple. </p>
+
+   	<p class = "paragraphs1"> I've picked up a copy of "Computer Arts" Magazine, and have enjoyed skim-reading it. At first glance it's a Graphic Designer's/Web Designer's magazine, with it's minimalist front cover being reflective of it's neat, well crafted interior and topics for discussion. <p>
+
+
+
+
 
 		<p class= "paragraphs">  </p>
 	</div>
