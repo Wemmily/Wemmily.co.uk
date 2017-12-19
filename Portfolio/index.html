@@ -8,14 +8,26 @@
 		<script>
 
 			$(document).ready(function() {
+
+				var backgroundfancy= true;
+
 				$("body").mousemove(function(e){
-					console.log(e.pageX)
+					console.log(e.pageX);
 
 					
+					if(backgroundfancy==true) {
+						$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)");
 
-					$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)")
+					} else {
+						$("body").css("background", "black");
 
+					}
+					
 				});
+
+				$("button").click(function(e){
+					backgroundfancy=!backgroundfancy;
+				})
 
 
 			});
@@ -58,6 +70,7 @@
 		</style>
 	</head>
 	<body> 
+		<button> Background: On/Off </button>
 
 		<style> .body { background-color: white ;} </style>
 
@@ -108,8 +121,8 @@
 	<tr style="width: 100%;">
 <div class="row">
 <tr>
-	<td></td>
 	<td><img class="pics" src="pots.jpg" style = "width:300px"><img/></td>
+	<td><img class="pics" src="matsutake.jpg" style = "width:300px"><img/></td>
 	<td></td>
 </tr>
 </table>
