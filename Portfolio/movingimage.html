@@ -8,14 +8,26 @@
 		<script>
 
 			$(document).ready(function() {
+
+				var backgroundfancy= true;
+
 				$("body").mousemove(function(e){
-					console.log(e.pageX)
+					console.log(e.pageX);
 
 					
+					if(backgroundfancy==true) {
+						$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)");
 
-					$("body").css("background", "hsla("+e.pageX+",50%, 80%, 1)")
+					} else {
+						$("body").css("background", "black");
 
+					}
+					
 				});
+
+				$("button").click(function(e){
+					backgroundfancy=!backgroundfancy;
+				})
 
 
 			});
@@ -58,6 +70,8 @@
 		</style>
 	</head>
 	<body> 
+		
+		<button> Background: On/Off </button>
 
 		<style> .body { background-color: white ;} </style>
 
@@ -96,11 +110,34 @@
 	<th class = "subheadings"> <a href = "../Portfolio/movingimage.html">Moving Image</a> </th>
 	<th class = "subheadings"> <a href = "../Portfolio/web.html">Web</a> </th>
 </table>
-<picture>
-<video src= "soundgifs.mov" style = width: 300px type="video/mp4"></video>
+<div height = "300"> </div>
+<br></tr>
 
-<video src= "utopiagifs.mov" style = width: 300px type="video/mp4"></video>
-</picture>
+
+<video width="320" height="240" autoplay>
+  <source src="utopiagifs.mov" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+
+<video width="320" height="240" autoplay>
+  <source src="utopiagifs.mov" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+<video width="320" height="240" autoplay>
+  <source src="utopiagifs.mov" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+<video width="320" height="240" autoplay>
+  <source src="utopiagifs.mov" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+
+
+
 
 
 	</div>
